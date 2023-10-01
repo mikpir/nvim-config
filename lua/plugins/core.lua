@@ -1,5 +1,5 @@
 return {
-  { "embarktheme/vim" },
+  { "embark-theme/vim" },
   {
     "LazyVim/LazyVim",
     opts = {
@@ -7,16 +7,27 @@ return {
     },
   },
   {
+
     "neovim/nvim-lspconfig",
     ---@class PluginLspOpts
     opts = {
       --@type lspconfig.options
+      importModuleSpecifier = "node",
       servers = {
         eslint = {},
         html = {},
         jsonls = {},
         pyright = {},
-        tsserver = {},
+        ---@type lspconfig.options.tsserver
+        tsserver = {
+          settings = {
+            typescript = {
+              preferences = {
+                importModuleSpecifier = "relative",
+              },
+            },
+          },
+        },
       },
     },
   },
