@@ -4,3 +4,5 @@
 vim.keymap.set("n", "<leader>n", function()
   vim.cmd("noh")
 end, { desc = "noh" })
+
+vim.keymap.set("i", "jk", "<esc>")

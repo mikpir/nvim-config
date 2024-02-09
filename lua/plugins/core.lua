@@ -1,9 +1,12 @@
 return {
+  { "oxfist/night-owl.nvim" },
   { "embark-theme/vim" },
+  { "folke/tokyonight.nvim" },
+  { "lervag/vimtex" },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "embark",
+      colorscheme = "tokyonight-storm",
     },
   },
   {
@@ -11,20 +14,14 @@ return {
     "neovim/nvim-lspconfig",
     ---@class PluginLspOpts
     opts = {
-      --@type lspconfig.options
-      importModuleSpecifier = "node",
       servers = {
         eslint = {},
         html = {},
-        jsonls = {},
         pyright = {},
-        ---@type lspconfig.options.tsserver
         tsserver = {
-          settings = {
-            typescript = {
-              preferences = {
-                importModuleSpecifier = "relative",
-              },
+          init_options = {
+            preferences = {
+              importModuleSpecifierPreference = "relative",
             },
           },
         },
