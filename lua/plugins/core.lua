@@ -20,7 +20,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-    colorscheme = "onedark",
+      colorscheme = "onedark",
     },
   },
   {
@@ -32,13 +32,30 @@ return {
         eslint = {},
         html = {},
         pyright = {},
-        tsserver = {
-          init_options = {
-            preferences = {
-              importModuleSpecifierPreference = "relative",
+        vtsls = {
+          settings = {
+            typescript = {
+              preferences = {
+                importModuleSpecifier = "relative",
+              },
+              inlayHints = {
+                enumMemberValues = { enabled = false },
+                functionLikeReturnTypes = { enabled = false },
+                parameterNames = { enabled = false },
+                parameterTypes = { enabled = false },
+                propertyDeclarationTypes = { enabled = false },
+                variableTypes = { enabled = false },
+              },
             },
           },
         },
+        -- tsserver = {
+        --   init_options = {
+        --     preferences = {
+        --       importModuleSpecifierPreference = "relative",
+        --     },
+        --   },
+        -- },
       },
     },
   },
