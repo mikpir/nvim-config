@@ -5,6 +5,9 @@ return {
       markdown = { "prettier" },
       typescript = { "prettier" },
       javascript = { "prettier" },
+      javascriptreact = { "prettier" },
+      typescriptreact = { "prettier" },
+      css = { "prettier" },
     },
   },
 }

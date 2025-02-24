@@ -3,6 +3,7 @@ return {
   { "embark-theme/vim" },
   { "folke/tokyonight.nvim" },
   { "navarasu/onedark.nvim" },
+  { "aktersnurra/no-clown-fiesta.nvim" },
   -- {
   --   'git@gitlab.com:gitlab-org/editor-extensions/gitlab.vim.git',
   --   'git@gitlab.com:gitlab-org/editor-extensions/gitlab-lsp.git',
@@ -20,11 +21,25 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "onedark",
+      colorscheme = "tokyonight-storm",
     },
   },
   {
-
+    "folke/snacks.nvim",
+    opts = {
+      picker = {
+        sources = {
+          explorer = {
+            hidden = true,
+            exclude = { ".git", ".husky", ".vscode" },
+          },
+          files = {},
+          grep = {},
+        },
+      },
+    },
+  },
+  {
     "neovim/nvim-lspconfig",
     ---@class PluginLspOpts
     opts = {
