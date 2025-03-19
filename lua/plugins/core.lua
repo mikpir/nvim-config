@@ -4,6 +4,7 @@ return {
   { "folke/tokyonight.nvim" },
   { "navarasu/onedark.nvim" },
   { "aktersnurra/no-clown-fiesta.nvim" },
+  { "rose-pine/neovim" },
   -- {
   --   'git@gitlab.com:gitlab-org/editor-extensions/gitlab.vim.git',
   --   'git@gitlab.com:gitlab-org/editor-extensions/gitlab-lsp.git',
@@ -21,7 +22,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight-storm",
+      colorscheme = "rose-pine",
     },
   },
   {
@@ -33,8 +34,14 @@ return {
             hidden = true,
             exclude = { ".git", ".husky", ".vscode" },
           },
-          files = {},
-          grep = {},
+          files = {
+            hidden = true,
+            exclude = { ".git", ".husky", ".vscode" },
+          },
+          grep = {
+            hidden = true,
+            exclude = { ".git", ".husky", ".vscode" },
+          },
         },
       },
     },
