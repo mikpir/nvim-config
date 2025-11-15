@@ -51,6 +51,9 @@ return {
     ---@class PluginLspOpts
     opts = {
       servers = {
+        tflint = {
+          cmd = { "tflint", "--langserver", "--disable-rule=terraform_required_providers" },
+        },
         eslint = {},
         html = {},
         pyright = {},
@@ -82,7 +85,7 @@ return {
     },
   },
   {
-    "echasnovski/mini.surround",
+    "nvim-mini/mini.surround",
     opts = {
       mappings = {
         add = "sa", -- Add surrounding in Normal and Visual modes
