@@ -4,7 +4,7 @@ return {
   { "folke/tokyonight.nvim" },
   { "navarasu/onedark.nvim" },
   { "aktersnurra/no-clown-fiesta.nvim" },
-  { "rose-pine/neovim" },
+  { "catppuccin/nvim" },
   -- {
   --   'git@gitlab.com:gitlab-org/editor-extensions/gitlab.vim.git',
   --   'git@gitlab.com:gitlab-org/editor-extensions/gitlab-lsp.git',
@@ -22,7 +22,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "rose-pine",
+      colorscheme = "catppuccin-mocha",
     },
   },
   {
